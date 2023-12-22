@@ -18,10 +18,11 @@
         app:layout_constraintBottom_toBottomOf="@+id/ed_book"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ed_book" />
+
     <EditText
+        android:id="@+id/ed_book"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/ed_book"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
@@ -43,59 +44,66 @@
         app:layout_constraintBottom_toBottomOf="@+id/ed_price"
         app:layout_constraintStart_toStartOf="@+id/book"
         app:layout_constraintTop_toTopOf="@+id/ed_price" />
+
     <EditText
+        android:id="@+id/ed_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/ed_price"
         android:layout_marginTop="16dp"
+
         android:ems="10"
         android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/ed_book"
         app:layout_constraintEnd_toEndOf="@+id/ed_book"
-        app:layout_constraintStart_toEndOf="@+id/ed_book"
-        app:layout_constraintTop_toTopOf="@+id/ed_book"
-        tools:ignore="Autofilll,LabelFor" />
+        app:layout_constraintStart_toStartOf="@+id/ed_book"
+
+
+        tools:ignore="Autofilll,LabelFor"
+        tools:layout_editor_absoluteX="74dp" />
+
     <LinearLayout
+        android:id="@+id/LinearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/LinearLayout"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ed_price" >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_price">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_insert"
-        android:layout_marginEnd="4dp"
-        android:layout_weight="1"
-        android:text="新增"
-        tools:ignore="ButtonStyle" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_update"
-        android:layout_marginEnd="4dp"
-        android:layout_weight="1"
-        android:text="修改"
-        tools:ignore="ButtonStyle" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_delete"
-        android:layout_marginEnd="4dp"
-        android:layout_weight="1"
-        android:text="刪除"
-        tools:ignore="ButtonStyle" />
         <Button
+            android:id="@+id/btn_insert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="新增"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="修改"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="刪除"
+            tools:ignore="ButtonStyle" />
+
+        <Button
             android:id="@+id/btn_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
             android:text="查詢"
@@ -103,15 +111,15 @@
     </LinearLayout>
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:id="@+id/listView"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LinearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
